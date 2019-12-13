@@ -98,7 +98,7 @@ paperChoose = document.getElementById('paper');
 scissorsChoose = document.getElementById('scissors');
 reset = document.getElementById('reset');
 
-rockChoose.addEventListener('click', () => {
+rockChoose.addEventListener('click', () => {console.log('OK');
 	game('rock', computerPlay(), Math.max(playerScore, compScore));
 });
 paperChoose.addEventListener('click', () => {
