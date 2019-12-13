@@ -16,7 +16,6 @@ function computerPlay() {
 events = document.getElementById('events')
 
 
-hello dhgdhtdth
 
 
 function playRound(playerSelection, computerSelection) {
