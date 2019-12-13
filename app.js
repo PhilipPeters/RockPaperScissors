@@ -3,35 +3,31 @@ function computerPlay() {
 	let sign = Math.floor(Math.random() * 3);
 	switch (sign) {
 		case 0:
-			return 'rock';
+			return 'scissors';
 			break;
 		case 1: 
-			return 'paper';
+			return 'rock';
 			break
 		default:
-			return 'scissors';("scissors", computerPlay)
+			return 'paper';("scissors", computerPlay)
 		}
 }
 
 
 events = document.getElementById('events')
 
-"easier to numerate things as we are dealing with relatively long strings, numbers are easier and have built in comparison operators"
-function numerate(word) {
-  return word.toUpperCase();
-}
 
 function playRound(playerSelection, computerSelection) {
-	playerSelection = numerate(playerSelection);
-	computerSelection = numerate(computerSelection);
+	playerSelection = playerSelection.toUpperCase();
+	computerSelection = computerSelection.toUpperCase();
 	if (playerSelection === computerSelection) {
 		events.innerHTML = `Draw! Both players choose ${playerSelection}`
 		return 2;
 	} else {
 		switch(playerSelection) {
-			case 1:
+			case 'SCISSORS':
 				switch(computerSelection) {
-					case 2:
+					case 'ROCK':
 						events.innerHTML = 'You Lose! Rocks beats Scissors';
 						return 0;
 						break;
@@ -41,9 +37,9 @@ function playRound(playerSelection, computerSelection) {
 						return 1;
 				}
 				break;
-			case '3':
+			case 'PAPER':
 				switch(computerSelection) {
-                        case '2':
+                        case 'ROCK':
 							 events.innerHTML = 'You Win! Paper beats Rock';
 							 return 1;
 							 break;
@@ -53,9 +49,9 @@ function playRound(playerSelection, computerSelection) {
 				}
 				break;
 
-			case '2':
+			case 'ROCK':
 				switch(computerSelection) {
-					case '3':
+					case 'PAPER':
 						events.innerHTML = 'You Lose! Paper beats Rock';
 						return 0;
 						break;
@@ -115,6 +111,4 @@ scissorsChoose.addEventListener('click', () => {
 
 reset.addEventListener('click', () => resetScore());
 
-
-
-#Credit is due to GitHub user orzymandias for most of the code
+#Code is due to GitHub user orzymandias
