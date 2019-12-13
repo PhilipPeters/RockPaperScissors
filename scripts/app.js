@@ -112,4 +112,3 @@ scissorsChoose.addEventListener('click', () => {
 
 reset.addEventListener('click', () => resetScore());
 
-#Code is due to GitHub user orzymandias
