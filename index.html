@@ -40,11 +40,15 @@
         
         function game() {
             for (let i = 0; i < 5; i++) {
-                let playerSelection = prompt('Type: Rock, Paper, or Scissors')
-                playerSelection = playerSelection.toLowerCase();
-                const computerSelection = computerPlay();
-                console.log(computerSelection);
-                console.log(playRound(playerSelection, computerSelection));
+              console.log('1');  
+              let playerSelection = prompt('Type: Rock, Paper, or Scissors');
+              console.log('2');
+              playerSelection = playerSelection.toLowerCase();
+              console.log('3');
+              const computerSelection = computerPlay();
+              console.log('4');
+              console.log(computerSelection);
+              console.log(playRound(playerSelection, computerSelection));
             }
             if (playerScore > computerScore) {
                 console.log(`You're the winner! Final Score: ${playerScore} to ${computerScore}`);
